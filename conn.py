@@ -18,7 +18,7 @@ toko = toko.loc[toko['location_destination']=='Toko Anggrek']
 sales['CodeArtikel'] = sales['Code'].str[:13]
 sales['Date'] = pd.to_datetime(sales['Date'], format='%d-%b-%Y')
 # toko['Date'] = toko['Date'].dt.strftime('%d-%m-%Y')
-marsales = sales.loc[sales['Date']>'29-Feb-2024']
+marsales = sales.loc[sales['Date'].between("01-Jan-2024", "31-Mar-2024")]
 
 
 ons = marsales.loc[(marsales['CHANNEL']=='TOKOPEDIA')|(marsales['CHANNEL']=='SHOPEE')|(marsales['CHANNEL']=='TIKTOK')|(marsales['CHANNEL']=='SHOPIFY')|(marsales['CHANNEL']=='WHATSAPP')|(marsales['CHANNEL']=='LAZADA')]
