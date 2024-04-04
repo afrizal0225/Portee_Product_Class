@@ -2,4 +2,4 @@ pandas
 streamlit
 numpy
 datetime
-git+https://github.com/streamlit/gsheets-connection
+https://github.com/streamlit/gsheets-connection
